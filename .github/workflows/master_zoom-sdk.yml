@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'zoom-sdk'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2d323949f803427cb02df45f6f9ea5ce }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fdf590ac35934f85a2cf191063d66e2c }}
         package: .
