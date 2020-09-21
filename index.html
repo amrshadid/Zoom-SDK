@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Zoom WebSDK</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+
+    <!-- CSS only -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+
+    <div id="" class=" fixed-top">
+
+        <form class="form" id="meeting_form">
+            <div class="form-group">
+                <input type="text" name="display_name" id="display_name" value="1.8.0#CDN" maxLength="100"
+                    placeholder="Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="meeting_number" id="meeting_number" value="1234234" maxLength="200"
+                     placeholder="Meeting Number" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="meeting_pwd" id="meeting_pwd" value="12sasq3"
+                    maxLength="32" placeholder="Meeting Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="meeting_email" id="meeting_email" value="" style="width:150px"
+                    maxLength="32" placeholder="Email option" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <select id="meeting_role" class="sdk-select">
+                    <option value=0>Attendee</option>
+                    <option value=1>Host</option>
+                    <option value=5>Assistant</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="meeting_china" class="sdk-select">
+                    <option value=0>Global</option>
+                    <option value=1>China</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="meeting_lang" class="sdk-select">
+                    <option value="en-US">English</option>
+                    <option value="de-DE">German Deutsch</option>
+                    <option value="es-ES">Spanish Español</option>
+                    <option value="fr-FR">French Français</option>
+                    <option value="jp-JP">Japanese 日本語</option>
+                    <option value="pt-PT">Portuguese Portuguese</option>
+                    <option value="ru-RU">Russian Русский</option>
+                    <option value="zh-CN">Chinese 简体中文</option>
+                    <option value="zh-TW">Chinese 繁体中文</option>
+                    <option value="ko-KO">Korean 한국어</option>
+                    <option value="vi-VN">Vietnamese Tiếng Việt</option>
+                    <option value="it-IT">Italian italiano</option>
+                </select>
+            </div>
+
+            <input type="hidden" value="" id="copy_link_value" />
+
+                    <div class="container-fluid d-flex justify-content-around ">
+                    <button type="button" id="join_meeting" class="btn btn-success btn-lg " data-toggle="modal" data-target="#myModal" onclick="join()" >join meeting +</button>
+                    <button type="submit" class="btn btn-success btn-lg" id="clear_all">Clear</button>
+                    <button type="button" link="" onclick="window.copyJoinLink('#copy_join_link')"class="btn btn-success btn-lg" id="copy_join_link">Copy Direct join link</button>
+
+                    </div>
+
+        </form>
+    </div>
+
+  </div>
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title ">meetings</h4>
+              <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
+            </div>
+            <div class=" embed-responsive embed-responsive-16by9">
+              <iframe id="meet" src="w" class="embed-responsive-item" width="100%" height="100%"></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/jquery.min.js"></script>
+    <script src="https://source.zoom.us/1.8.0/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-1.8.0.min.js"></script>
+    
+    <script src="js/tool.js"></script>
+    <script src="js/vconsole.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+  </body>
+
+</html>
